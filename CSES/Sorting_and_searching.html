@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sum of 2 Values</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      margin: 40px;
+      background-color: #f9f9f9;
+      color: #222;
+    }
+    h1 {
+      color: #333;
+    }
+    section {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+    }
+    code {
+      background: #eee;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <h1>Sum of 2 Values</h1>
+
+  <section>
+    <p>
+      This is the classic <strong>2-sum problem</strong>. The goal is to find two distinct elements in an array whose sum equals a given target value.
+    </p>
+
+    <p>
+      I began by pairing each element with its original index using tuples of the form <code>(value, index)</code>. After constructing this list of tuples, I sorted the array based on the value.
+    </p>
+
+    <p>
+      Once sorted, I applied the standard <strong>two-pointer approach</strong>: I initialized two pointers — one at the beginning (<code>left</code>) and one at the end (<code>right</code>) of the array.
+    </p>
+
+    <p>
+      In each iteration, I checked the sum of the two values at the pointers. If the sum was less than the target, I incremented the <code>left</code> pointer. If it was greater, I decremented the <code>right</code> pointer. If the sum equaled the target, I had found my solution.
+    </p>
+
+    <p>
+      If the pointers crossed without finding such a pair, I concluded that no valid solution exists.
+    </p>
+  </section>
+</body>
+</html>
